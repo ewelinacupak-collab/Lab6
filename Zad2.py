@@ -1,8 +1,8 @@
 import numpy as np
 
-np.random.seed(42)
+u = np.random.default_rng(42)
 
-mac = np.random.rand(6,4)
+mac = u.normal(0,1,(6,4))
 print(mac)
 
 print("--------")
@@ -20,4 +20,6 @@ max_ind = np.argmax(mac, axis=0)
 print(max_ind)
 
 print("--------")
+
+
 
